@@ -1,0 +1,16 @@
+<%= form_for @location do |l| %>
+<div>
+<%= l.label :name %>
+<%= l.text_field :name %>
+</div>
+<div>
+<%= l.label :picture_url %>
+<%= l.text_field :picture_url %>
+</div>
+<div>
+<%= l.label :review %>
+<%= l.text_field :review %>
+</div>
+<%= l.submit %>
+<% end %>
+
