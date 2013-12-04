@@ -1,4 +1,4 @@
-class LocationsController < ApplicationsController
+class LocationsController < ApplicationController
 
 	def index
 		@locations = Location.all
@@ -14,7 +14,7 @@ class LocationsController < ApplicationsController
 	end
 
 	def create
-		@location = Location.new(locations_params)
+		@location = Location.new(location_params)
 		@location.save
 		
 		redirect_to root_path
@@ -28,7 +28,7 @@ class LocationsController < ApplicationsController
 	def update
 		id = params[:id]
 		@location = Location.find(id)
-		@location.update(locations_params)
+		@location.update(location_params)
 
 		redirect_to root_path
 	end
@@ -41,7 +41,7 @@ class LocationsController < ApplicationsController
 		redirect_to root_path
 	end
 
-	def locations_params
+	def location_params
 		params.require(:location).permit(:name, :picture_url, :review)
 	end
 end
