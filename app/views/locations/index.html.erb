@@ -12,6 +12,7 @@
 	 	<% @locations.each do |location| %>
 	 	<tr>
 	 		<td><h3><%= location.name %></h3></td>
+	 		<td><img heigh="50px" width="50px" src="<%= location.picture_url %>"></img></td>
 	 		<td></td>
 	 		<td><%= link_to "Show", location_path(location.id) %></td>
 	 		<td><%= link_to "Edit", edit_location_path(location.id) %></td>
@@ -23,4 +24,4 @@
 	</tbody>
 <table>
 
-<button><%= link_to "Add New", new_location_path %></button>
+<button class="add_new"><%= link_to "Add New", new_location_path %></button>
