@@ -1,7 +1,7 @@
 <table>
   <thead>
     <tr>
-      <th>Locations</th>
+      <th><h1>Locations</h1></th>
       <th></th>
       <th></th>
       <th></th>
@@ -11,16 +11,16 @@
 	<tbody>
 	 	<% @locations.each do |location| %>
 	 	<tr>
-	 		<td><%= location.name %></td>
-	 		<td></td>
+	 		<td><h3><%= location.name %></h3></td>
 	 		<td></td>
 	 		<td><%= link_to "Show", location_path(location.id) %></td>
 	 		<td><%= link_to "Edit", edit_location_path(location.id) %></td>
 	 		<td><%= link_to "Delete", location, method: :delete, data: {confirm:("Are you sure?") } %></td>
+	 		<td></td>
+	 		<td><%= location.snippet %></td>
 	 	</tr>
-	 	<tr><%= location.snippet %></tr>
 	 	<% end %>
 	</tbody>
 <table>
 
-<p><%= link_to "Add New", new_location_post %></p>
+<button><%= link_to "Add New", new_location_path %></button>
