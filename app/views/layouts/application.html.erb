@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title>ThreeSquare</title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -12,6 +12,19 @@
   </head>
 
   <body>
+  	<nav class="top-bar" data-topbar>
+		  <ul class="title-area">
+		    <li class="name">
+		      <h1><%= link_to 'ThreeSquare', root_path %></h1>
+		    </li>
+		  </ul>
+
+		  <section class="top-bar-section">
+		    <ul class="left">
+		      <li class="active"><%= link_to 'New Location', new_location_path %></li>
+		    </ul>
+		  </section>
+		</nav>
 
     <%= yield %>
     <%= javascript_include_tag "application" %>

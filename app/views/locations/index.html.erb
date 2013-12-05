@@ -2,9 +2,6 @@
   <thead>
     <tr>
       <th><h1>Locations</h1></th>
-      <th></th>
-      <th></th>
-      <th></th>
     </tr>
   </thead>
 
@@ -12,10 +9,10 @@
 	 	<% @locations.each do |location| %>
 	 	<tr>
 	 		<td><h3><%= location.name %></h3></td>
-	 		<td><img heigh="50px" width="50px" src="<%= location.picture_url %>"></img></td>
+	 		<td><img height="50px" width="50px" src="<%= location.picture_url %>"></img></td>
 	 		<td></td>
-	 		<td><%= link_to "Show", location_path(location.id) %></td>
-	 		<td><%= link_to "Edit", edit_location_path(location.id) %></td>
+	 		<td><%= link_to "Show", location %></td>
+	 		<td><%= link_to "Edit", edit_location_path(location) %></td>
 	 		<td><%= link_to "Delete", location, method: :delete, data: {confirm:("Are you sure?") } %></td>
 	 		<td></td>
 	 		<td><%= location.snippet %></td>
@@ -23,5 +20,3 @@
 	 	<% end %>
 	</tbody>
 <table>
-
-<button class="add_new"><%= link_to "Add New", new_location_path %></button>
